@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    {{#if message}}
+    <h2>{{ message }}</h2>
+    {{/if}}
+    <form action="/auth/login" method="POST">
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <button type="submit">Login</button>
+    </form>
+    <a href="/register">Register</a>
+</body>
+</html>
